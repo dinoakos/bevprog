@@ -8,8 +8,8 @@ try
 //1.
 cout << "Success!\n";
 
-//
-2. cout << "Success!\n";
+//2. 
+cout << "Success!\n";
 
 // 3. 
 cout << "Success" << "!\n";
