@@ -5,148 +5,153 @@ int main()
 try 
 {
 
-// 1. cout << "Success!\n";
+//1.
+cout << "Success!\n";
 
-// 2. cout << "Success!\n";
+//
+2. cout << "Success!\n";
 
-// 3. cout << "Success" << "!\n";
+// 3. 
+cout << "Success" << "!\n";
 
-// 4. cout << "Success!" << '\n';
+// 4. 
+cout << "Success!" << '\n';
 
-/* 5. 
+// 5. 
    int res = 7; 
    vector<int> v(10); 
    v[5] = res; 
    cout << "Success!\n";
-*/
 
-/* 6. 
+
+//6. 
    vector<int> v(10); 
    v(5) = 7; 
    if (v(5)==7) 
    cout << "Success!\n";
-*/
 
-/* 7. 
+
+// 7. 
    int a = 1,b = 1;
    if (a = b) 
    cout << "Success!\n"; 
    else 
    cout << "Fail!\n"; 
-*/
 
-/* 8. 
+
+// 8. 
    bool c = true; 
    if (c) 
    cout << "Success!\n"; 
    else 
    cout << "Fail!\n";
-*/
 
-/* 9. 
+
+//9. 
    string s = "ape"; 
    bool c = true; 
    if (c) 
    cout << "Success!\n";
-*/
 
-/* 10. 
+
+//10. 
    string s = "ape"; 
    if (s == "ape") 
    cout << "Success!\n";
-*/
 
-/* 11. 
+
+//11. 
    string s = "fool"; 
    if (s == "fool") 
    cout < "Success!\n";
-*/
 
-/* 12. 
+
+// 12. 
    string s = "ape";
    if (s != "fool") 
    cout < "Success!\n";
-*/
 
-/* 13. 
+
+// 13. 
    vector<char> v(5); 
    for (int i=0; i < v.size(); ++i); 
    cout << "Success!\n";
-*/
 
-/* 14. 
+
+// 14. 
    vector<char> v(5); 
    for (int i=1; i <= v.size(); ++i) ; 
    cout << "Success!\n";
-*/
 
-/* 15. 
+
+// 15. 
    string s = "Success!\n"; 
    for (int i=0; i < 11; ++i) 
    cout << s[i];
-*/
 
-/* 16. 
+
+// 16. 
    if (true) 
    cout << "Success!\n"; 
    else 
    cout << "Fail!\n";
-*/
 
-/* 17.
+
+//17.
    int x = 2000; 
    int c = x; 
    if (c == 2000) 
    cout << "Success!\n";
-*/
 
-/* 18. 
+
+// 18. 
    string s = "Success!\n"; 
    for (int i=0; i < 9; ++i) 
    cout << s[i];
-*/
 
-/* 19. 
+
+// 19. 
    vector<int> v(5); 
    for (int i=0; i<=v.size(); ++i); 
    cout << "Success!\n";
-*/
 
-/* 20. 
+
+// 20. 
    int i = 0; 
    int j = 9; 
    while (i < 10) ++i; 
    if (j < i) 
    cout << "Success!\n";
-*/
 
-/* 21. 
+
+// 21. 
    double x = 2; 
    double d = 5/(x-2); 
    if ( d!=2*x+0.5) 
    cout << "Success!\n";
-*/
 
-/* 22. 
+
+// 22. 
    string s = "Success!\n"; 
    for (int i=0; i<=10; ++i);
    cout << s;
-*/
 
-/* 23. 
+
+// 23. 
    int i = 0, j = 0;
    while (i < 10) ++i; 
    if (j < i) cout << "Success!\n";
-*/
 
-/* 24. 
+
+// 24. 
    double x = 4; 
    double d = 5/(x-2); 
    if (d != 2*x+0.5) 
    cout << "Success!\n";
-*/
 
-// 25. cout << "Success!\n";
+
+// 25.
+ cout << "Success!\n";
 
    keep_window_open();
    return 0;
