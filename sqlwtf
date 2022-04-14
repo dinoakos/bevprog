@@ -1,0 +1,25 @@
+--1
+SELECT vezeteknev,keresztnev FROM HAJO.s_ugyfel WHERE szul_dat < to_date('2000','yyyy') ORDER BY vezeteknev DESC,keresztnev DESC;
+--2
+SELECT * FROM hajo.s_hajo WHERE nev not like '% %' ORDER BY nev DESC;
+--3
+
+--4
+SELECT indulasi_kikoto,max(fizetett_osszeg) FROM hajo.s_megrendeles GROUP BY indulasi_kikoto ORDER BY max(fizetett_osszeg) DESC;
+--5
+SELECT to_char(megrendeles_datuma,'yyyy.mm') FROM hajo.s_megrendeles GROUP BY to_char(megrendeles_datuma,'yyyy.mm') HAVING count(megrendeles_id)>=6 ORDER BY  to_char(megrendeles_datuma,'yyyy.mm');
+--6
+SELECT DISTINCT u.vezeteknev,u.keresztnev FROM
+hajo.s_ugyfel u inner join hajo.s_megrendeles m on
+m.ugyfel=u.ugyfel_id WHERE EXTRACT(month from u.szul_dat)=EXTRACT(month from m.megrendeles_datuma) ORDER BY u.vezeteknev;
+--7
+SELECT indulasi_kikoto,erkezesi_kikoto, SUM(rakomanysuly) 
+FROM hajo.s_megrendeles m INNER JOIN hajo.s_hozzarendel h on m.megrendeles_id=h.megrendeles 
+GROUP BY indulasi_kikoto,erkezesi_kikoto HAVING SUM(rakomanysuly)>1000 ORDER BY SUM(rakomanysuly) DESC;
+--8
+SELECT orszag,helysegnev FROM hajo.s_helyseg h inner join hajo.s_kikoto k on k.helyseg = h.helyseg_id WHERE orszag in (SELECT orszag FROM hajo.s_orszag WHERE foldresz='Ázsia'); 
+--9
+--10
+SELECT vezeteknev,keresztnev,to_char(szul_dat,'yyyy.mm.dd') FROM hajo.s_ugyfel 
+WHERE helyseg in (SELECT helyseg_id FROM hajo.s_helyseg WHERE orszag='Olaszország') 
+GROUP BY vezeteknev,keresztnev,to_char(szul_dat,'yyyy.mm.dd') ;
